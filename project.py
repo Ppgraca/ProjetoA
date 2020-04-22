@@ -87,6 +87,7 @@ fig , ax= plt.subplots()
 plt.plot(xvalores, yvalores, '-o')
 ax.set_xlabel("hora do dia")
 ax.set_ylabel("temperatura media em Celcius")
+ax.set_title('Figura 1')
 
 
 
@@ -113,7 +114,7 @@ plt.scatter(nascer_do_sol, round(ns,2), color = "green", marker = "x", s = 500)
 index_ps = np.argwhere((mes == 1) & (hora == round(por_do_sol)))         
 ps = np.mean(temperatura_corrigida[index_ps])
 plt.scatter(por_do_sol, round(ps,2), color = "green", marker = "x", s = 500)
-
+ax.set_title("Figura 1'")
 
 #ALINEA F
 
@@ -125,6 +126,7 @@ for h in range(24):
 ax1= ax.twinx()
 ax1.set_ylabel('Radiação solar')
 ax1.plot(rs_media, color='purple')
+ax.set_title('Figura 1a')
 fig.tight_layout()
 
 
